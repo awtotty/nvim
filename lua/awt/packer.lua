@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   
+
   use {
 	  'nvim-telescope/telescope.nvim', 
 	  tag = '0.1.2',
@@ -27,13 +28,13 @@ return require('packer').startup(function(use)
 	  {run = ':TSUpdate'}
   }
 
-  use 'nvim-treesitter/playground'
+  use('nvim-treesitter/playground')
 
-  use 'ThePrimeagen/harpoon'
+  use('ThePrimeagen/harpoon')
 
-  use 'mbbill/undotree'
+  use('mbbill/undotree')
 
-  use 'tpope/vim-fugitive'
+  use('tpope/vim-fugitive')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -56,6 +57,6 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use "tpope/vim-commentary"
+  use("tpope/vim-commentary")
 
 end)
