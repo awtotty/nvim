@@ -42,4 +42,22 @@ vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 
+-- toggle virtual text in diagnostics
+vim.g.diagnostics_active = true
+function _G.toggle_diagnostics()
+    if vim.g.diagnostics_active then
+        vim.g.diagnostics_active = false
+        vim.diagnostic.config({
+            virtual_text = false,
+        })
+    else
+        vim.g.diagnostics_active = true
+        vim.diagnostic.config({
+            virtual_text = true,
+        })
+    end
+end
+vim.api.nvim_set_keymap('n', '<leader>tt', ':call v:lua.toggle_diagnostics()<CR>',  {noremap = true, silent = true})
+
+
 -- additional keymaps in nvim/after/plugin for each plugin 
