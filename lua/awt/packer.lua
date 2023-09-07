@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   
 
+  -- file browsing and searching
   use {
 	  'nvim-telescope/telescope.nvim', 
 	  tag = '0.1.2',
@@ -15,6 +16,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- make it look sexy
   use { 
 	  'rose-pine/neovim', 
 	  as = 'rose-pine',
@@ -23,19 +25,25 @@ return require('packer').startup(function(use)
 	  end
   }
 
+  -- file tree analysis
   use {
 	  'nvim-treesitter/nvim-treesitter', 
 	  {run = ':TSUpdate'}
   }
 
+  -- playground for developing plugins
   use('nvim-treesitter/playground')
 
+  -- harpoon man
   use('ThePrimeagen/harpoon')
 
+  -- undo in tree form
   use('mbbill/undotree')
 
+  -- git management
   use('tpope/vim-fugitive')
 
+  -- LSP
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
@@ -57,6 +65,7 @@ return require('packer').startup(function(use)
 	  }
   }
 
+  -- toggle comments in lots of languages
   use("tpope/vim-commentary")
 
 end)
