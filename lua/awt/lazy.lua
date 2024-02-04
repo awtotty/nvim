@@ -55,6 +55,11 @@ require("lazy").setup({
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     },  
+
+    -- Copilot: everybody needs a buddy
+    { 
+        "github/copilot.vim",
+    },
 })
 
 
