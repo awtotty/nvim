@@ -49,12 +49,19 @@ require("lazy").setup({
         "tpope/vim-commentary"
     },
 
-    -- LSP
+    -- Language Support
     {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
-    },  
+        {'neovim/nvim-lspconfig'},             
+        {'williamboman/mason.nvim'},          
+        {'williamboman/mason-lspconfig.nvim'},
+
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},    
+        {'hrsh7th/cmp-nvim-lsp'}, 
+        
+        -- Snippets
+        {'L3MON4D3/LuaSnip'}, 
+    },
 
     -- Copilot: everybody needs a buddy
     { 
