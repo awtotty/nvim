@@ -1,5 +1,5 @@
 -- require subpackages of awt here
-require("awt.packer")
+require("awt.lazy")
 require("awt.remap")
 require("awt.set")
 
