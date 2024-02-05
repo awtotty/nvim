@@ -15,27 +15,28 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
-    -- Telescope: file browsing and searching 
+    -- Telescope: file browsing and searching
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.5',
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' },
     },
 
     -- rose-pine: make it look sexy
-    { 
-        "rose-pine/neovim", 
+    {
+        "rose-pine/neovim",
         name = "rose-pine",
     },
 
     -- Treesitter: file tree analysis
     {
-        "nvim-treesitter/nvim-treesitter", 
+        "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
     },
 
     -- Harpoon: because file trees suck
-    { 
+    {
         "ThePrimeagen/harpoon"
     },
 
@@ -49,24 +50,28 @@ require("lazy").setup({
         "tpope/vim-commentary"
     },
 
+    -- Git stuff
+    {
+        "tpope/vim-fugitive",
+        "airblade/vim-gitgutter",
+    },
+
     -- Language Support
     {
-        {'neovim/nvim-lspconfig'},             
-        {'williamboman/mason.nvim'},          
-        {'williamboman/mason-lspconfig.nvim'},
+        { 'neovim/nvim-lspconfig' },
+        { 'williamboman/mason.nvim' },
+        { 'williamboman/mason-lspconfig.nvim' },
 
         -- Autocompletion
-        {'hrsh7th/nvim-cmp'},    
-        {'hrsh7th/cmp-nvim-lsp'}, 
-        
+        { 'hrsh7th/nvim-cmp' },
+        { 'hrsh7th/cmp-nvim-lsp' },
+
         -- Snippets
-        {'L3MON4D3/LuaSnip'}, 
+        { 'L3MON4D3/LuaSnip' },
     },
 
     -- Copilot: everybody needs a buddy
-    { 
+    {
         "github/copilot.vim",
     },
 })
-
-
