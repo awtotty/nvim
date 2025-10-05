@@ -40,6 +40,11 @@ require("lazy").setup({
         "ThePrimeagen/harpoon"
     },
 
+    -- NERDTree: because file trees sometimes don't suck
+    {
+        "preservim/nerdtree"
+    },
+
     -- Undotree: better undo
     {
         "mbbill/undotree"
