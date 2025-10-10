@@ -35,12 +35,12 @@ require("lazy").setup({
         build = ":TSUpdate"
     },
 
-    -- Harpoon: because file trees suck
+    -- Harpoon: because file tree browsers suck
     {
         "ThePrimeagen/harpoon"
     },
 
-    -- NERDTree: because file trees sometimes don't suck
+    -- NERDTree: because file tree browsers sometimes don't suck
     {
         "preservim/nerdtree"
     },
