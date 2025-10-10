@@ -57,7 +57,6 @@ require("lazy").setup({
 
     -- Git stuff
     {
-        "tpope/vim-fugitive",
         "airblade/vim-gitgutter",
     },
 
@@ -73,10 +72,5 @@ require("lazy").setup({
 
         -- Snippets
         { 'L3MON4D3/LuaSnip' },
-    },
-
-    -- Copilot: everybody needs a buddy
-    {
-        "github/copilot.vim",
     },
 })
