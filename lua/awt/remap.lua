@@ -58,5 +58,15 @@ function _G.toggle_diagnostics()
 end
 vim.api.nvim_set_keymap('n', '<leader>tt', ':call v:lua.toggle_diagnostics()<CR>',  {noremap = true, silent = true})
 
+-- terminal open below
+vim.keymap.set("n", "<leader>ts", function()
+  vim.cmd.new()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 15)
+  vim.cmd.startinsert()
+end)
+
+vim.keymap.set('t', '<C-n>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- additional keymaps in nvim/after/plugin for each plugin 
