@@ -76,10 +76,16 @@ require("lazy").setup({
 
     -- Edit on remotes
     {
-        'chipsenkbeil/distant.nvim', 
+        'chipsenkbeil/distant.nvim',
         branch = 'v0.3',
         config = function()
             require('distant'):setup()
         end
+    },
+
+    -- Formatting
+    {
+        'stevearc/conform.nvim',
+        event = { "BufReadPre", "BufNewFile" },
     }
 })
