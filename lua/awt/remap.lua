@@ -39,19 +39,20 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- toggle virtual text in diagnostics
 vim.g.diagnostics_active = true
 function _G.toggle_diagnostics()
-    if vim.g.diagnostics_active then
-        vim.g.diagnostics_active = false
-        vim.diagnostic.config({
-            virtual_text = false,
-        })
-    else
-        vim.g.diagnostics_active = true
-        vim.diagnostic.config({
-            virtual_text = true,
-        })
-    end
+  if vim.g.diagnostics_active then
+    vim.g.diagnostics_active = false
+    vim.diagnostic.config({
+      virtual_text = false,
+    })
+  else
+    vim.g.diagnostics_active = true
+    vim.diagnostic.config({
+      virtual_text = true,
+    })
+  end
 end
-vim.api.nvim_set_keymap('n', '<leader>tt', ':call v:lua.toggle_diagnostics()<CR>',  {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('n', '<leader>tt', ':call v:lua.toggle_diagnostics()<CR>', { noremap = true, silent = true })
 
 -- terminal open below
 vim.keymap.set("n", "<leader>ts", function()
@@ -62,6 +63,9 @@ vim.keymap.set("n", "<leader>ts", function()
   vim.cmd.startinsert()
 end)
 
-vim.keymap.set('t', '<C-n>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<C-n>', '<C-\\><C-n>', { desc = 'Exit terminal mode to normal mode' })
 
--- additional keymaps in nvim/after/plugin for each plugin 
+-- rename token
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
+
+-- additional keymaps in nvim/after/plugin for each plugin
