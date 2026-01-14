@@ -1,3 +1,5 @@
+-- https://github.com/X3eRo0/dired.nvim?tab=readme-ov-file#keybinding
+
 -- Set up the 'dired' plugin with custom options
 require("dired").setup({
   path_separator = "/", -- Use '/' as the path separator
@@ -26,6 +28,12 @@ require("dired").setup({
   },
 })
 
+-- Open dired in current buffer
+vim.keymap.set("n", "<leader>dd", function()
+  vim.cmd("Dired")
+end, { desc = "Open Dired in new buffer" })
+
+-- Open dired in new buffer
 vim.keymap.set("n", "<leader>dn", function()
   vim.cmd.new()
   vim.cmd("Dired")
