@@ -18,8 +18,7 @@ require("lazy").setup({
   -- Telescope: file browsing and searching
   {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
-    -- or                              , branch = '0.1.x',
+    branch = 'master',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
 
@@ -32,7 +31,9 @@ require("lazy").setup({
   -- Treesitter: file tree analysis
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate"
+    branch = "main",
+    build = ":TSUpdate",
+    lazy = false,
   },
 
   -- Harpoon: because file tree browsers suck
@@ -93,5 +94,10 @@ require("lazy").setup({
   {
     'stevearc/conform.nvim',
     event = { "BufReadPre", "BufNewFile" },
+  },
+
+  {
+    dir = '/home/awt/programs/orc.nvim',
+    opts = {},
   }
 })
