@@ -95,9 +95,4 @@ require("lazy").setup({
     'stevearc/conform.nvim',
     event = { "BufReadPre", "BufNewFile" },
   },
-
-  {
-    dir = '/home/awt/programs/orc.nvim',
-    opts = {},
-  }
 })
