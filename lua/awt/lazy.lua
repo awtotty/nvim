@@ -36,16 +36,6 @@ require("lazy").setup({
     lazy = false,
   },
 
-  -- Harpoon: because file tree browsers suck
-  {
-    "ThePrimeagen/harpoon"
-  },
-
-  -- NERDTree: because file tree browsers sometimes don't suck
-  {
-    "preservim/nerdtree"
-  },
-
   -- dired: steal the best of emacs
   {
     "X3eRo0/dired.nvim",
@@ -55,11 +45,6 @@ require("lazy").setup({
   -- Undotree: better undo
   {
     "mbbill/undotree"
-  },
-
-  -- Vim-Commentary: comments in most languages
-  {
-    "tpope/vim-commentary"
   },
 
   -- Git stuff
@@ -79,15 +64,6 @@ require("lazy").setup({
 
     -- Snippets
     { 'L3MON4D3/LuaSnip' },
-  },
-
-  -- Edit on remotes
-  {
-    'chipsenkbeil/distant.nvim',
-    branch = 'v0.3',
-    config = function()
-      require('distant'):setup()
-    end
   },
 
   -- Formatting

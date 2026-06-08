@@ -1,5 +1,4 @@
 -- vim.g.mapleader = " "
-
 vim.keymap.set("n", "<leader>pt", vim.cmd.Ex)
 
 -- highlight move (amazing!)
@@ -59,7 +58,7 @@ vim.keymap.set("n", "<leader>ts", function()
   vim.cmd.new()
   vim.cmd.term()
   vim.cmd.wincmd("J")
-  vim.api.nvim_win_set_height(0, 15)
+  -- vim.api.nvim_win_set_height(0, 15)
   vim.cmd.startinsert()
 end)
 
